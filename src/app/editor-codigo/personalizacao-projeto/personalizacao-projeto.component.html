@@ -1,0 +1,25 @@
+<div class="d-flex flex-column mb-4">
+  <h6 class="mb-3">PERSONALIZAÇÃO</h6>
+  <div class="btn-group">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+      {{selectedOption}}
+    </button>
+    <ul class="dropdown-menu dropdown-menu-dark w-100 text-center" aria-labelledby="dropdownMenuButton">
+      <li *ngFor="let language of optionsLanguage" class="dropdown-item" (click)="onSelected(language)">
+        {{language}}
+      </li>
+    </ul>
+  </div>
+  <div class="mt-3 w-100 text-center">
+  <select class="form-select border-0" id="colorSelector" [(ngModel)]="selectedOptionColor" (change)="onColorChange($event)" [ngStyle]="{'background-color': selectedOptionColor}">
+    <option value="#6BD1FF" style="background-color: #6BD1FF;"></option>
+    <option value="#9AFF6B" style="background-color: #9AFF6B;"></option>
+    <option value="#6B83FF" style="background-color: #6B83FF;"></option>
+    <option value="#FFC46B" style="background-color: #FFC46B;"></option>
+    <option value="#FF6BCD" style="background-color: #FF6BCD;"></option>
+  </select>
+  </div>
+  <div class="btn btn-warning mt-3" [ngStyle]="{'background-color': '#5081FB', 'color': '#051D3B', 'border-color': '#5081FB'}">
+    Salvar
+  </div>
+</div>

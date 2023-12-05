@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-2">
+    <app-menu></app-menu>
+  </div>
+  <div class="col-10 mt-4">
+    <div class="row" [ngStyle]="{'margin-right': '0.5rem'}">
+      <div class="col-6 mb-4" *ngFor="let post of posts">
+        <app-card>
+          <div class="border-0 rounded w-100" [ngStyle]="{'background-color': 'blue'}">
+            <div class="border-0 rounded p-4 align-items-center" [ngStyle]="{'background-color': '#6BD1FF'}">
+              <textarea class="form-control bg-black text-light border-0 readonly" readonly rows="13" style="resize: none;" [ngStyle]="{'background-color': 'black'}">{{post.description}}</textarea>
+            </div>
+            <div class="border-0 p-4 h-100 align-items-center" [ngStyle]="{'background-color': '#051D3B', 'opacity': '88%', 'color': 'white'}">
+              <h3 [textContent]="post.title" class="text-start"></h3>
+              <p [textContent]="post.description" class="text-start opacity-75"></p>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-between gap-3">
+                  <i aria-hidden="true" class="fa fa-comment" *ngIf="post.likes">  {{post.likes}}</i>
+                  <i aria-hidden="true" class="fa fa-heart" *ngIf="post.likes">  {{post.likes}}</i>
+                </div>
+                <div>
+                  <i aria-hidden="true" class="fa fa-user" *ngIf="post.author">  @{{post.author}}</i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </app-card>
+      </div>
+    </div>
+  </div>
+</div>

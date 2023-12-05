@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+header {
+  background-color: #051D3B;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container {
+  background-color: #051D3B;
+}
+
+.navbar-expand-lg {
+  padding: 1rem .8rem;
+}
+
+html {
+  height: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #051D3B;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  /* padding-bottom: 8px; */
+  height: auto;
+  background-color: #051D3B;
+}
