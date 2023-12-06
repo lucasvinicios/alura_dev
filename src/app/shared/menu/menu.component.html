@@ -3,13 +3,13 @@
   <ul class="nav flex-column d-flex align-items-start pt-3">
     <li class="nav-item d-flex">
       <div class="py-2 text-white d-flex justify-content-start align-items-center gap-3">
-        <img src="../../assets/Icon.png" alt="Codigo" class="logo mr-3">
+        <img [src]="iconEditor" alt="Codigo" class="logo mr-3">
         <a [routerLink]="['/editor-codigo']" [ngStyle]="{'text-decoration': 'none', 'color': 'white'}">Editor de Código</a>
       </div>
     </li>
     <li class="nav-item d-flex">
       <div class="py-2 text-white d-flex justify-content-start align-items-center gap-3">
-        <img src="../../assets/Comunidade.png" alt="Codigo" class="logo mr-3">
+        <img [src]="iconCommunity" alt="Codigo" class="logo mr-3">
         <a [routerLink]="['/comunidade']" [ngStyle]="{'text-decoration': 'none', 'color': 'white'}">Comunidade</a>
       </div>
     </li>
